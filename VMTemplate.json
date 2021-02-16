@@ -165,7 +165,6 @@
       "name": "[concat(parameters('virtualMachineName'),'/Microsoft.Azure.Security.IaaS')]",
       "apiVersion": "2019-07-01",
       "location": "[parameters('existingVnetLocation')]",
-      "tags": { "AppMaintenanceWindows": "[parameters('vm_region_tag')]"},
       "dependsOn": [
         "[concat('Microsoft.Compute/virtualMachines/', parameters('virtualMachineName'))]"
       ],
@@ -248,6 +247,7 @@
       "type": "Microsoft.Compute/virtualMachines",
       "name": "[parameters('virtualMachineName')]",
       "location": "[parameters('existingVnetLocation')]",
+      "tags": { "AppMaintenanceWindows": "[parameters('vm_region_tag')]"},
       "dependsOn": [
         "[resourceId('Microsoft.Network/networkInterfaces/', variables('nicName'))]"
       ],
