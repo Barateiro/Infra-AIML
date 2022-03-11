@@ -248,7 +248,7 @@ Trace-Log $pass
 
 
 Trace-Log "Log file: $logLoc"
-$uri = "https://binfordeploy.blob.core.windows.net/binaries/IntegrationRuntime_5.6.7809.1.msi"
+$uri = "https://binfordeploy.blob.core.windows.net/binaries/IntegrationRuntime_5.15.8092.1.msi"
 $urij = "https://binfordeploy.blob.core.windows.net/binaries/jre-8u251-windows-x64.exe"
 $uric = "https://binfordeploy.blob.core.windows.net/binaries/config.txt"
 
