@@ -139,27 +139,6 @@
 			}
 		},
 		{
-			"name": "[concat(parameters('virtualMachineName'),'/QualysAgent')]",
-			"type": "Microsoft.Compute/virtualMachines/extensions",
-			"location": "[parameters('existingVnetLocation')]",
-			"apiVersion": "2015-06-15",
-			"dependsOn": [
-				"[concat('Microsoft.Compute/virtualMachines/', variables('virtualMachineName'))]"
-			],
-			"properties": {
-				"publisher": "Qualys",
-				"type": "QualysAgent",
-				"typeHandlerVersion": "1.6",
-				"autoUpgradeMinorVersion": false,
-				"settings": {
-					"LicenseCode": "985bcbdc-7387-4802-9eab-e7523832f00c",
-					"ResourceID": "",
-					"VmRegion": "",
-					"Logging": ""
-				}
-			}
-		},
-		{
 			"type": "Microsoft.Compute/virtualMachines/extensions",
 			"name": "[concat(parameters('virtualMachineName'),'/Microsoft.Azure.Security.IaaS')]",
 			"apiVersion": "2019-07-01",
